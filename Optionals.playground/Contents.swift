@@ -68,9 +68,11 @@ func shoutMiddleName(optionalMiddleName: String?) {
 // Nil coalescing
 // Sometimes there are instances where we want to use a default value when handling nils.
 
-var firstName : String? = nil
+var firstName : String? = "Dakota"
 
 let unwrappedFirtName = firstName ?? "Anonymous"
+
+print("My first name is \(unwrappedFirtName)")
 // If there is a last name, we will assign it to unwrappedLastName. If the optional is nil, we assign a default last name of Smith.
 // The '??' is known as the nil-coalescing operator. So when we reference unwrappedFirstName, we will DEFINITELY be working with a non-optional type.
 
@@ -92,6 +94,10 @@ class Computer {
 }
 
 let dakota = Person()
+
+let computationalDevice = Computer()
+
+dakota.computer = computationalDevice
 
 if let numCPUs = dakota.computer?.numberOfCPUS {
     print("My name is Dakota, and I have a computer with \(numCPUs) CPUs!")
